@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>隐私政策 | 皮皮记账 · CostBook</title>
+<link rel="icon" href="icon.png">
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:#23312e;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;font-size:16px;line-height:1.8;letter-spacing:0}
+header{border-bottom:1px solid #e2e8e5;background:#f7faf8}header>div{max-width:1000px;margin:auto;padding:22px 28px;display:flex;gap:28px;align-items:center;flex-wrap:wrap}.brand{display:flex;align-items:center;gap:12px;color:#23312e;font-size:23px;font-weight:700;text-decoration:none}.brand img{width:46px;height:46px;border-radius:8px}
+nav{display:flex;gap:24px;margin-left:auto}a{color:#176c58;text-underline-offset:4px}nav a{font-size:14px;text-decoration:none}nav a[aria-current]{font-weight:700;border-bottom:2px solid #176c58}
+main{max-width:820px;margin:0 auto;padding:35px 28px 64px}.draft{margin-bottom:30px;padding:12px 0;border-block:1px solid #dfe6e2;font-size:13px;color:#52625d}.heading{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}h1{font-size:32px;line-height:1.3;margin:5px 0 18px}h3{font-size:20px;line-height:1.45;margin:34px 0 12px}p{margin:12px 0 18px}.switch{display:flex;gap:12px}button{font:inherit;font-size:14px;color:#52625d;border:none;border-bottom:2px solid transparent;background:transparent;padding:6px 0;cursor:pointer}button[aria-pressed="true"]{color:#176c58;border-color:#176c58}button:focus-visible,a:focus-visible{outline:2px solid #217b65;outline-offset:4px}
+code{font-size:13px;overflow-wrap:anywhere;color:#4c5f68}footer{max-width:820px;margin:auto;padding:22px 28px;border-top:1px solid #e2e8e5;font-size:13px;color:#52625d}footer p{margin:0}[hidden]{display:none!important}@media(max-width:600px){header>div{padding:18px 20px;gap:18px}nav{margin-left:0;flex-basis:100%}main{padding:26px 20px 45px}h1{font-size:28px}.brand{font-size:21px}footer{padding:20px}}
+</style>
+</head>
+<body>
+<header><div><a class="brand" href="support.html"><img src="icon.png" alt=""><span>皮皮记账 · CostBook</span></a><nav aria-label="网站导航"><a href="support.html" >帮助与支持 / Support</a><a href="privacy.html" aria-current="page">隐私政策 / Privacy</a></nav></div></header>
+<main>
+<div class="draft">公开署名：hanna。官方页面以本仓库发布版本为准。Public attribution: hanna. This published page is the official version.</div>
+<div class="heading"><h1 id="title">隐私政策</h1><div class="switch" aria-label="Language"><button type="button" data-language="zh-Hans" aria-pressed="true">简体中文</button><button type="button" data-language="en" aria-pressed="false">English</button></div></div>
+<p id="updated" style="color:#6b7873;font-size:13px">更新日期：2026-10-21</p>
+<article id="zh-Hans"><p>皮皮记账（CostBook）用于个人收支记录、账户管理和统计。本政策说明应用如何处理你输入的数据、照片附件、应用设置、备份文件和网络请求。</p>
+<h3>1. 本机记录与设置</h3>
+<p>你创建的账本、账户、币种、类目、标签、账单、备注、退款和账户余额保存在应用的本机数据容器中。语言偏好、汇率和备份设置也保存在本机。</p>
+<p>当前版本无需注册或登录，不连接你的银行或支付平台，不读取银行卡登录信息，也不会由开发者服务器接收你的账单、余额或备注。账户类型中的银行、支付、贷款和投资名称仅用于分类手动记账，不执行实际金融交易。</p>
+<h3>2. 照片附件</h3>
+<p>你可以通过 iOS 系统照片选择器主动选择照片作为账单附件。应用只获取你选择的项目，不请求浏览整个照片库的权限。所选文件被复制到应用本机数据容器中；原文件可能包含由相机或照片来源写入的元数据。</p>
+<p>完整备份会包含照片附件。账单 CSV 不包含照片附件。</p>
+<h3>3. 备份、导出与恢复</h3>
+<p>你可以主动导出完整 JSON 备份或账单 CSV，也可以授权应用访问你选择的本地或 iCloud 文件夹。启用自动备份后，应用会按设置向已授权的位置写入备份。后台执行时间和 iCloud 同步由操作系统及文件提供方决定。</p>
+<p>备份文件可能含有财务记录、备注、照片、账户设置和语言偏好。当前版本不为这些文件提供应用级加密。请将文件保存在可信的位置，不要将备份或 CSV 公开分享给不可信的人。</p>
+<p>iCloud Drive 或其他文件提供方会按照其自身条款和隐私政策处理你放入其服务的文件。文件不会上传到由本应用开发者运营的备份服务器。</p>
+<p>恢复完整备份会替换本机应用数据；应用会在恢复前保留一份本机安全副本。文件夹授权和后台运行状态不从外部备份恢复，可能需要你重新选择备份位置。</p>
+<h3>4. 联网汇率</h3>
+<p>只有在你选择更新汇率时，应用才请求 Frankfurter 的公共汇率接口：<code>https://api.frankfurter.dev/v1/latest?base=CNY</code>。</p>
+<p>请求不包含账单、账户名称、余额、备注或照片。网络传输过程中服务器及网络服务需要处理连接信息。Frankfurter 的<a href="https://frankfurter.dev/#faq">官方说明</a>表示，其公共 API 不收集或记录个人数据、IP 地址或请求网址，Cloudflare 仅提供聚合流量统计。第三方服务的行为可能变化，应以其当前说明为准。</p>
+<p>你可以手动管理汇率，不使用联网更新功能。</p>
+<h3>5. 广告与跟踪</h3>
+<p>当前版本不包含广告、用户跟踪、广告标识符访问、第三方分析 SDK 或开发者运营的账号系统。应用不会出售你的财务记录，也不用于广告定向或设备指纹识别。</p>
+<h3>6. 数据管理与删除</h3>
+<p>你可以在应用内编辑或删除记录，调整语言和备份设置，或移除备份文件夹授权。移除授权、关闭自动备份或删除账单不会自动删除已生成的备份、导出文件或所有独立附件文件。</p>
+<p>卸载应用通常会移除其本机数据容器。已保存在本地文件夹、iCloud、系统设备备份或其他位置的副本需要通过对应系统或服务单独管理。卸载前请确认需要保留的记录已经完成备份。</p>
+<h3>7. 儿童与政策更新</h3>
+<p>本应用不专门面向儿童，不提供社交、聊天或公开内容发布功能。由于开发者不运营个人财务数据服务器，无法从服务器中检索或删除你的本机记录。</p>
+<p>如未来版本增加账户服务、数据上传、广告或分析功能，我们会在启用相应功能前更新政策和商店隐私说明，并按适用要求取得授权。</p>
+<h3>8. 联系</h3>
+<p>运营主体：hanna（个人运营）。</p>
+<p>隐私联系邮箱：<a href="mailto:hannading98@gmail.com">hannading98@gmail.com</a>。</p>
+</article>
+<article id="en" lang="en" hidden><p>CostBook is a personal bookkeeping app for recording income, expenses, accounts, and statistics. This policy explains how the app handles the records, attachments, settings, backups, and network requests associated with its current iOS version.</p>
+<h3>1. Local Records and Settings</h3>
+<p>Ledgers, accounts, currencies, categories, tags, transactions, notes, refunds, and balances are stored in the app&#39;s local data container. Language preferences, exchange rates, and backup settings are also stored locally.</p>
+<p>The current version does not require registration or sign-in. It does not connect to banks or payment platforms or read banking credentials. Financial records, balances, and notes are not sent to a developer-operated server. Bank, payment, lending, and investment account types are labels for manual bookkeeping and do not initiate financial transactions.</p>
+<h3>2. Photo Attachments</h3>
+<p>You may select photos through the iOS system photo picker. The app receives the items you select and does not request permission to browse your entire photo library. Selected files are copied to the app&#39;s local data container and may retain metadata supplied by the camera or original source.</p>
+<p>Complete backups include photo attachments. Transaction CSV files do not.</p>
+<h3>3. Backups, Exports, and Restore</h3>
+<p>You may export complete JSON backups or transaction CSV files and authorize access to a local or iCloud folder of your choice. When automatic backup is enabled, the app writes backups to the authorized locations according to your settings. Background scheduling and iCloud synchronization are controlled by the operating system and file provider.</p>
+<p>Backup files may contain financial records, notes, photos, account settings, and language preferences. The current version does not provide app-level encryption for these files. Store them in trusted locations and do not share them publicly or with people you do not trust.</p>
+<p>iCloud Drive and other file providers handle the files you place in their services under their own terms and privacy policies. Files are not uploaded to a backup server operated by the app developer.</p>
+<p>Restoring a complete backup replaces local app data. A local safety copy is saved before restoration. Folder authorizations and background runtime state are not restored from an external backup, so you may need to select backup locations again.</p>
+<h3>4. Online Exchange Rates</h3>
+<p>The app contacts Frankfurter&#39;s public API only when you choose to update rates: <code>https://api.frankfurter.dev/v1/latest?base=CNY</code>.</p>
+<p>The request does not contain transactions, account names, balances, notes, or photos. Network services necessarily process connection information during transmission. Frankfurter&#39;s <a href="https://frankfurter.dev/#faq">official FAQ</a> states that its public API does not collect or log personal data, IP addresses, or request URLs, and that Cloudflare provides aggregate traffic statistics only. Third-party practices may change; consult its current documentation.</p>
+<p>You may maintain rates manually instead of using online updates.</p>
+<h3>5. Advertising and Tracking</h3>
+<p>The current version has no advertising, user tracking, advertising identifier access, third-party analytics SDKs, or developer-operated account system. Financial records are not sold or used for targeted advertising or device fingerprinting.</p>
+<h3>6. Managing and Removing Data</h3>
+<p>You may edit or delete records, change language and backup settings, or remove backup folder authorization. Removing authorization, disabling automatic backup, or deleting a transaction does not automatically delete previously created backups, exported files, or all independently stored attachment files.</p>
+<p>Uninstalling the app normally removes its local data container. Copies in local folders, iCloud, system device backups, or other locations must be managed separately through those systems or services. Back up records you wish to keep before uninstalling.</p>
+<p>The developer does not operate a server containing your personal financial records and cannot retrieve or delete your local records remotely.</p>
+<h3>7. Children and Policy Updates</h3>
+<p>CostBook is not specifically directed at children and does not provide social networking, chat, or public content publishing. If a future version introduces account services, data uploads, advertising, or analytics, this policy and the store disclosures will be updated before those features are enabled, with authorization requested where required.</p>
+<h3>8. Contact</h3>
+<p>Operator: hanna (individual operator).</p>
+<p>Privacy contact email: <a href="mailto:hannading98@gmail.com">hannading98@gmail.com</a>.</p>
+</article>
+</main>
+<footer><p>皮皮记账 · CostBook　<a href="mailto:hannading98@gmail.com">hannading98@gmail.com</a></p></footer>
+<script>
+const titles = {"zh-Hans":"隐私政策","en":"Privacy Policy"};
+function selectLanguage(code){
+  if(!titles[code])code='zh-Hans';
+  document.documentElement.lang=code;
+  document.getElementById('title').textContent=titles[code];
+  document.getElementById('updated').textContent=code==='en'?'Updated: October 21, 2026':'更新日期：2026-10-21';
+  document.querySelectorAll('article').forEach(article=>article.hidden=article.id!==code);
+  document.querySelectorAll('[data-language]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.language===code)));
+}
+document.querySelectorAll('[data-language]').forEach(button=>button.addEventListener('click',()=>{selectLanguage(button.dataset.language);history.replaceState(null,'','#'+button.dataset.language)}));
+selectLanguage(location.hash.slice(1));
+</script>
+</body></html>
